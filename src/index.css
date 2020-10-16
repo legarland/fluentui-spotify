@@ -1,0 +1,63 @@
+:root {
+  --green: #1db954;
+}
+
+*,
+html,
+body {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 768px;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overscroll-behavior-y: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#root > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.simplebar-scrollbar:before {
+  background: var(--green) !important;
+}
+
+.spotify-button {
+  display: flex;
+  background: var(--green);
+  color: #fff;
+  border: 0;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.spotify-button:hover {
+  background-color: black;
+}
+
+.spotify-logo {
+  height: 30px;
+  fill: #fff;
+  margin-right: 10px;
+}

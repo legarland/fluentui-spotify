@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "wesbos"
+  ],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
+    "react/prop-types": 0,
+    "camelcase": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "singleQuote": true
+      }
+    ]
+  }
+}
