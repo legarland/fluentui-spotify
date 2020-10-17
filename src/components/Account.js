@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useCallback, useRef } from 'react'
 import { useUser } from 'react-spotify-api'
-import { SpotifyAuth, Scopes } from 'react-spotify-auth'
 import {
   Persona,
   PersonaSize,

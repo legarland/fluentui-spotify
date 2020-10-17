@@ -3,9 +3,10 @@ import { Stack } from '@fluentui/react'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
 import Account from './Account'
-import NavButtons from './NavButtons'
 
-const PageTitle = styled.h1``
+const PageTitle = styled.h1`
+  margin: 0;
+`
 
 const StackContainer = styled.div`
   /* padding: 1rem; */

@@ -4,7 +4,6 @@ import SimpleBar from 'simplebar-react'
 import 'simplebar/src/simplebar.css'
 import styled from 'styled-components'
 import usePlaylists from '../hooks/usePlaylists'
-import { setPageTitle } from '../store/pageSlice'
 
 const Container = styled.div`
   overflow: hidden;

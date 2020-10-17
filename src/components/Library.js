@@ -1,7 +1,12 @@
 import React from 'react'
 import { Pivot, PivotItem } from '@fluentui/react'
+import styled from 'styled-components'
 import LibraryPlaylists from './LibraryPlaylists'
 import usePageTitle from '../hooks/usePageTitle'
+
+const TopMargin = styled.div`
+  margin-top: 10px;
+`
 
 const Library = () => {
   usePageTitle('Your Library')
@@ -9,7 +14,9 @@ const Library = () => {
     <div>
       <Pivot>
         <PivotItem headerText="Playlists">
-          <LibraryPlaylists />
+          <TopMargin>
+            <LibraryPlaylists />
+          </TopMargin>
         </PivotItem>
         <PivotItem headerText="Podcasts" />
         <PivotItem headerText="Artists" />
