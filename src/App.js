@@ -120,6 +120,7 @@ function Application() {
                 Scopes.userReadPlaybackState,
                 Scopes.playlistReadCollaborative,
                 Scopes.playlistReadPrivate,
+                Scopes.streaming,
               ]} // either style will work
             />
           </LoginContainer>

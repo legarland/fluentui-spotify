@@ -3,9 +3,12 @@ import { Pivot, PivotItem } from '@fluentui/react'
 import styled from 'styled-components'
 import LibraryPlaylists from './LibraryPlaylists'
 import usePageTitle from '../hooks/usePageTitle'
+import LibraryPodcasts from './LibraryPodcasts'
+import LibraryArtists from './LibraryArtists'
+import LibraryAlbums from './LibraryAlbums'
 
 const TopMargin = styled.div`
-  margin-top: 10px;
+  margin-top: 15px;
 `
 
 const Library = () => {
@@ -18,9 +21,21 @@ const Library = () => {
             <LibraryPlaylists />
           </TopMargin>
         </PivotItem>
-        <PivotItem headerText="Podcasts" />
-        <PivotItem headerText="Artists" />
-        <PivotItem headerText="Albums" />
+        <PivotItem headerText="Podcasts">
+          <TopMargin>
+            <LibraryPodcasts />
+          </TopMargin>
+        </PivotItem>
+        <PivotItem headerText="Artists">
+          <TopMargin>
+            <LibraryArtists />
+          </TopMargin>
+        </PivotItem>
+        <PivotItem headerText="Albums">
+          <TopMargin>
+            <LibraryAlbums />
+          </TopMargin>
+        </PivotItem>
       </Pivot>
     </div>
   )

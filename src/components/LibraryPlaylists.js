@@ -1,7 +1,7 @@
 import { Stack } from '@fluentui/react'
 import React from 'react'
 import usePlaylists from '../hooks/usePlaylists'
-import PlaylistCard from './PlaylistCard'
+import GenralCard from './GeneralCard'
 
 const LibraryPlaylists = () => {
   const playlists = usePlaylists()
@@ -15,11 +15,11 @@ const LibraryPlaylists = () => {
       }}
     >
       {playlists.map((p) => (
-        <PlaylistCard
+        <GenralCard
           id={p.id}
           key={p.id}
           name={p.name}
-          description={p.description}
+          meta={p.description || 'By You'}
           image={p.images[0].url}
         />
       ))}

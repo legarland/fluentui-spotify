@@ -55,7 +55,12 @@ const TrackCard = ({ id }) => {
           tokens={{ childrenGap: '10px' }}
         >
           <PlayButton trackId={data.id} />
-          <Text variant="medium">{data.name}</Text>
+          <Text variant="medium" nowrap style={{ maxWidth: '100%' }}>
+            {data.name}
+          </Text>
+          <Text variant="small" nowrap style={{ maxWidth: '100%' }}>
+            {data.artists[0].name}
+          </Text>
         </Stack>
       </Card.Item>
     </Card>
