@@ -13,6 +13,7 @@ const Playlist = ({ playlistId }) => {
     <div>
       <TrackList
         tracks={playlist.tracks.items.map((i) => ({
+          id: i.track.id,
           title: i.track.name,
           artist: i.track.artists[0].name,
           album: i.track.album.name,

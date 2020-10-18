@@ -29,7 +29,7 @@ const TrackList = ({ tracks }) => {
       minWidth: 25,
       maxWidth: 25,
       // onColumnClick: this._onColumnClick,
-      onRender: () => <PlayButton size="medium" />,
+      onRender: (item) => <PlayButton size="medium" trackId={item.id} />,
     },
     {
       key: 'column2',

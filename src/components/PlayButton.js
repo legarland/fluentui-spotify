@@ -12,8 +12,9 @@ const PlayButton = ({ size, trackId }) => {
     <IconButton
       onClick={() => {
         if (spotify) {
-          if (isPlaying) spotify.pause()
-          else spotify.play()
+          if (isPlaying && trackId === track.id) spotify.pause()
+          else if (trackId === track.id) spotify.play()
+          else spotify.play({ uris: [`spotify:track:${trackId}`] })
         }
       }}
       iconProps={{
