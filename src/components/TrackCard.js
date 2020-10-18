@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import useSpotify from '../hooks/useSpotify'
 import { myTheme } from '../lib/theme'
 import PlayButton from './PlayButton'
+import GeneralCard from './GeneralCard'
 
 const TrackCard = ({ id }) => {
   const [data, setData] = useState()
@@ -16,54 +17,13 @@ const TrackCard = ({ id }) => {
   }, [id, spotify])
 
   return data ? (
-    <Card
-      styles={{
-        root: {
-          backgroundColor:
-            currentTrack.id === data.id && isPlaying ? '#333' : '#161616',
-          paddingTop: '2rem',
-          paddingBottom: '1rem',
-          boxShadow: myTheme.effects.elevation64,
-        },
-      }}
-    >
-      <Card.Item>
-        <Stack horizontalAlign="center" grow={false}>
-          <Image
-            src={data.album.images[0].url}
-            width="60%"
-            height="60%"
-            styles={{
-              root: {
-                borderRadius: '50%',
-              },
-            }}
-          />
-        </Stack>
-      </Card.Item>
-      <Card.Item>
-        <Stack
-          horizontal
-          verticalAlign="center"
-          horizontalAlign="center"
-          style={{
-            paddingLeft: 10,
-            paddingRight: 10,
-            paddingTop: 20,
-            paddingBottom: 15,
-          }}
-          tokens={{ childrenGap: '10px' }}
-        >
-          <PlayButton trackId={data.id} />
-          <Text variant="medium" nowrap style={{ maxWidth: '100%' }}>
-            {data.name}
-          </Text>
-          <Text variant="small" nowrap style={{ maxWidth: '100%' }}>
-            {data.artists[0].name}
-          </Text>
-        </Stack>
-      </Card.Item>
-    </Card>
+    <GeneralCard
+      name={data.name}
+      id={data.id}
+      location="/album/track"
+      meta={data.artists[0].name}
+      image={data.album.images[0].url}
+    />
   ) : null
 }
 

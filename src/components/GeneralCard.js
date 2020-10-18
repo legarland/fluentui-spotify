@@ -34,7 +34,7 @@ const PlaylistCard = ({ name, meta, image, id, location = 'playlist' }) => {
       <Card.Item
         styles={{
           root: {
-            maxWidth: 200,
+            maxWidth: 210,
           },
         }}
       >

@@ -16,7 +16,7 @@ const RecentlyPlayed = () => {
             (item, index, self) =>
               self.findIndex((t) => t.track.id === item.track.id) === index
           )
-          .slice(0, 5)
+          .slice(0, 10)
       )
     }
     if (spotify) load()
