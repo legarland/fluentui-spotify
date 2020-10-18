@@ -10,6 +10,7 @@ import NowPlayingBar from './NowPlayingBar'
 import Playlist from './Playlist'
 import Home from './Home'
 import Search from './Search'
+import Album from './Album'
 
 const ScrollContainer = styled(SimpleBar)`
   grid-area: main-view;
@@ -55,6 +56,9 @@ const WebPlayer = () => (
         </Route>
         <Route path="/playlist/:id">
           <Playlist />
+        </Route>
+        <Route path="/album/:albumId/track/:trackId">
+          <Album />
         </Route>
       </Switch>
     </ScrollContainer>

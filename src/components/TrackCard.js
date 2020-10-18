@@ -20,7 +20,7 @@ const TrackCard = ({ id }) => {
     <GeneralCard
       name={data.name}
       id={data.id}
-      location="/album/track"
+      location={`album/${data.album.id}/track`}
       meta={data.artists[0].name}
       image={data.album.images[0].url}
     />
