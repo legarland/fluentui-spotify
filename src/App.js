@@ -122,6 +122,8 @@ function Application() {
                 Scopes.userReadPlaybackState,
                 Scopes.playlistReadCollaborative,
                 Scopes.playlistReadPrivate,
+                Scopes.playlistModifyPublic,
+                Scopes.playlistModifyPrivate,
                 Scopes.streaming,
               ]} // either style will work
             />
