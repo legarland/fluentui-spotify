@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
 import 'simplebar/src/simplebar.css'
 import styled from 'styled-components'
@@ -25,15 +25,20 @@ const LinkContainer = styled.div`
 const PlaylistLink = styled(Link)`
   text-decoration: none;
   color: #fff;
+  font-weight: ${({ active }) => (active ? 'bold' : 'normal')};
 `
 const Playlists = () => {
   const playlists = usePlaylists()
+  const history = useHistory()
   return (
     <Container>
       <ScrollContainer>
         {playlists.map((playlist) => (
           <LinkContainer>
-            <PlaylistLink to={`/playlist/${playlist.id}`}>
+            <PlaylistLink
+              active={history.location.pathname.indexOf(playlist.id) !== -1}
+              to={`/playlist/${playlist.id}`}
+            >
               {playlist.name}
             </PlaylistLink>
           </LinkContainer>
