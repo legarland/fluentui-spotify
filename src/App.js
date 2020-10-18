@@ -107,7 +107,9 @@ function Application() {
             <SpotifyAuth
               btnClassName="spotify-button"
               logoClassName="spotify-logo"
-              redirectUri="http://localhost:3000"
+              redirectUri={
+                process.env.REACT_APP_REDIRECT_URL || 'http://localhost:3000'
+              }
               clientID="631bcd897d95417796a52eeb8003e432"
               scopes={[
                 Scopes.userReadPrivate,
